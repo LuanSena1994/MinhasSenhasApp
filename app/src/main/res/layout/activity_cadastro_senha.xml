@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CadastroUsuarioActivity">
+    tools:context=".CadastroSenhaActivity">
 
 
     <RelativeLayout
-        android:id="@+id/afterAnimationView"
+        android:id="@+id/cadastroSenhaView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginStart="20dp"
@@ -18,51 +18,42 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/WelcomeTextView"
+            android:id="@+id/tituloTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Cadastro de Usuário"
+            android:text="Cadastro de Senha"
             android:textColor="@color/colorBackground"
             android:textSize="25sp"
             android:textStyle="bold" />
 
         <LinearLayout
-            android:id="@+id/layoutImagem"
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:gravity="center"
-            android:layout_marginTop="30dp"
-            android:layout_below="@+id/WelcomeTextView"
-            android:layout_height="wrap_content">
-
-            <com.rishabhharit.roundedimageview.RoundedImageView
-                android:id="@+id/userImage"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@drawable/ic_person"
-                app:cornerRadius="1000dp" />
-
-            <ImageButton
-                android:id="@+id/capturedImage"
-                android:background="@drawable/ic_control_point"
-                android:onClick="capturarImagem"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-
-        </LinearLayout>
-
-
-        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_above="@+id/loginButton"
-            android:layout_below="@+id/layoutImagem"
+            android:layout_below="@+id/WelcomeTextView"
             android:gravity="center"
             android:orientation="vertical">
 
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/usuarioEditTextLayout"
+                android:id="@+id/cadNomeSenhaEditTextLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nome da Senha"
+                android:textColor="@color/colorTextView"
+                android:textColorHint="@color/colorAccent"
+                android:textSize="15sp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/cadNomeSenhaEditTextInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/cadUsuarioEditTextLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Usuário"
@@ -71,13 +62,13 @@
                 android:textSize="15sp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/usuarioEditTextInput"
+                    android:id="@+id/cadUsuarioEditTextInput"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/senhaEditTextLayout"
+                android:id="@+id/cadSenhaEditTextLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="25dp"
@@ -87,39 +78,39 @@
                 android:textSize="15sp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/senhaEditTextInput"
+                    android:id="@+id/cadSenhaEditTextInput"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/perguntaEditTextLayout"
+                android:id="@+id/cadUrlEditTextLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="25dp"
-                android:hint="Pergunta Secreta"
+                android:hint="URL ou Site"
                 android:textColor="@color/colorTextView"
                 android:textColorHint="@color/colorAccent"
                 android:textSize="15sp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/perguntaEditTextInput"
+                    android:id="@+id/cadUrlEditTextInput"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/respostaEditTextLayout"
+                android:id="@+id/cadObservacaoEditTextLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="25dp"
-                android:hint="Resposta Secreta"
+                android:hint="Observação"
                 android:textColor="@color/colorTextView"
                 android:textColorHint="@color/colorAccent"
                 android:textSize="15sp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/respostaEditTextInput"
+                    android:id="@+id/cadObservacaoEditTextInput"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -133,13 +124,13 @@
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="5dp"
             android:background="@drawable/button_drawable"
-            android:onClick="cadastrarUsuario"
-            android:text="Cadastrar"
+            android:onClick="cadastrarSenha"
+            android:text="Cadastrar Nova Senha"
             android:textAllCaps="false"
             android:textColor="@color/colorAccent"
             android:textSize="16sp" />
 
-     </RelativeLayout>
+    </RelativeLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
