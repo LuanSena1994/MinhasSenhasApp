@@ -12,6 +12,15 @@ public interface SenhaDao {
     @Query("SELECT * FROM senha")
     List<Senha> getAll();
 
+    @Query("SELECT * FROM senha ORDER BY nome")
+    List<Senha> getAllOrdemCrescente();
+
+    @Query("SELECT * FROM senha ORDER BY nome DESC")
+    List<Senha> getAllOrdemDecrescente();
+
+    @Query("SELECT * FROM senha WHERE nome LIKE :nomePesquisado")
+    List<Senha> getPesquisaNome(String nomePesquisado);
+
     @Query("SELECT * FROM senha WHERE uid IN (:senhaIds)")
     List<Senha> loadAllByIds(int[] senhaIds);
 
