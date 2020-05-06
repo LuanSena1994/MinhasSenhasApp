@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".CadastroUsuarioActivity">
 
-
     <RelativeLayout
         android:id="@+id/afterAnimationView"
         android:layout_width="match_parent"
@@ -27,36 +26,10 @@
             android:textStyle="bold" />
 
         <LinearLayout
-            android:id="@+id/layoutImagem"
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:gravity="center"
-            android:layout_marginTop="30dp"
-            android:layout_below="@+id/WelcomeTextView"
-            android:layout_height="wrap_content">
-
-            <com.rishabhharit.roundedimageview.RoundedImageView
-                android:id="@+id/userImage"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@drawable/ic_person"
-                app:cornerRadius="1000dp" />
-
-            <ImageButton
-                android:id="@+id/capturedImage"
-                android:background="@drawable/ic_control_point"
-                android:onClick="capturarImagem"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-
-        </LinearLayout>
-
-
-        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_above="@+id/loginButton"
-            android:layout_below="@+id/layoutImagem"
+            android:layout_below="@+id/WelcomeTextView"
             android:gravity="center"
             android:orientation="vertical">
 
@@ -89,7 +62,6 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/senhaEditTextInput"
                     android:layout_width="match_parent"
-                    android:tooltipText="v"
                     android:layout_height="wrap_content" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -140,7 +112,7 @@
             android:textColor="@color/colorAccent"
             android:textSize="16sp" />
 
-     </RelativeLayout>
+    </RelativeLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
