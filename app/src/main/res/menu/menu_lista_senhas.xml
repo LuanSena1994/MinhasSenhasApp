@@ -2,19 +2,23 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/action_crescente"
-        android:title="Orderm Crescente"/>
+        android:id="@+id/action_Ordem_Crescente"
+        android:orderInCategory="100"
+        android:title="Ordem Crescente"/>
     <item
-        android:id="@+id/action_decrescente"
+        android:id="@+id/action_Ordem_Decrescente"
         android:title="Ordem Decrescente"
         app:showAsAction="never"/>
     <item
-        android:id="@+id/action_busca"
-        android:title="Busca"
-        app:showAsAction="never"/>
-    <item
-        android:id="@+id/action_original"
+        android:id="@+id/action_Ordem_Original"
         android:title="Ordem Original"
         app:showAsAction="never"/>
 
+    <item
+        android:id="@+id/action_busca"
+        android:title="Pesquisar"
+        android:icon="@android:drawable/ic_menu_search"
+        app:showAsAction="collapseActionView|ifRoom"
+        app:actionViewClass="android.widget.SearchView"
+        />
 </menu>
