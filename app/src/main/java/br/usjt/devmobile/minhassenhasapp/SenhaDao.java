@@ -4,7 +4,6 @@ import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
-import androidx.room.Update;
 
 import java.util.List;
 
@@ -32,12 +31,6 @@ public interface SenhaDao {
     @Insert
     void insertAll(Senha... senhas);
 
-    @Update
-    void updateSenha(Senha senha);
-
     @Delete
     void delete(Senha senha);
-
-    @Query("SELECT * FROM senha ORDER BY nome DESC")
-    List<Senha> getAllAsc();
 }

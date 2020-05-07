@@ -39,7 +39,7 @@ public class ListasSenhasActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-         db = Room.databaseBuilder(this.getApplicationContext(),
+        db = Room.databaseBuilder(this.getApplicationContext(),
                 AppDatabase.class, "database-name").build();
         listaSenhas = geraListaSenhas();
         senhasListView = findViewById(R.id.senhasListView);
@@ -73,7 +73,7 @@ public class ListasSenhasActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_Ordem_Crescente:
-               geraListaSenhasOrdemCrescente();
+                geraListaSenhasOrdemCrescente();
                 break;
             case R.id.action_Ordem_Decrescente:
                 geraListaSenhasOrdemDecrescente();
