@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 public class DetalhesSenhaActivity extends AppCompatActivity {
@@ -35,4 +36,28 @@ public class DetalhesSenhaActivity extends AppCompatActivity {
         textViewObservacao.setText(senha.getObservacao());
 
     }
+
+    public void fecharActivity(View view) {
+        finish();
+    }
+
+    public void alterarSenha(View view) {
+
+        senha.setNome(textViewNome.getText().toString());
+        senha.setUsuario(textViewUsuario.getText().toString());
+        senha.setSenha(textViewSenha1.getText().toString());
+        senha.setUrl(textViewUrl.getText().toString());
+        senha.setObservacao(textViewObservacao.getText().toString());
+
+        Intent intent = new Intent(this, CadastroSenhaActivity.class);
+        intent.putExtra("senha",senha);
+        startActivity(intent);
+        finish();
+    }
+
+    public void deletarSenha(View view) {
+        // Mostrar aqui um dialog e confirmar a deleção da senha
+        finish();
+    }
+
 }

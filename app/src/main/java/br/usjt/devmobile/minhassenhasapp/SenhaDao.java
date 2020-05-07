@@ -4,6 +4,7 @@ import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
+import androidx.room.Update;
 
 import java.util.List;
 
@@ -27,6 +28,9 @@ public interface SenhaDao {
     @Query("SELECT * FROM senha WHERE nome LIKE :nome AND " +
             "usuario LIKE :usuario LIMIT 1")
     Senha findByName(String nome, String usuario);
+
+    @Update
+    void updateSenha(Senha senha);
 
     @Insert
     void insertAll(Senha... senhas);
