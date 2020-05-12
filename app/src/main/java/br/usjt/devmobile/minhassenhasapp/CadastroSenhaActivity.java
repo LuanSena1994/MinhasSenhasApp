@@ -1,9 +1,13 @@
 package br.usjt.devmobile.minhassenhasapp;
 
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AlertDialog.Builder;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.room.Room;
-import androidx.room.util.StringUtil;
 
+import androidx.room.Room;
+
+
+import android.content.DialogInterface;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
@@ -107,5 +111,7 @@ public class CadastroSenhaActivity extends AppCompatActivity {
             finish();
         }
     }
+
+
 
 }
